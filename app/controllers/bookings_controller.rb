@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     	BookingConfirmationMailer.new_booking_for_admin(@booking).deliver
 	    session[:start_date] = nil
 	    session[:end_date] = nil
-      session[:user_email] = nil
+      	session[:user_email] = nil
 	    redirect_to booking_path(@booking)
 	  else
 	    render 'new'

@@ -112,14 +112,6 @@ $(document).ready(function() {
   });
 });
 
-//validar fechas homepage
-// function prueba(event){
-//   // return false;
-//   event.preventDefault();
-//   // alert("clickeado");
-// }
-
-
 function checkAll(){
 	// Pass in a named "Check All" checkbox that appears on the same form where all 
 	// checkboxes should be checked.
