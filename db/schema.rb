@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150605175423) do
+ActiveRecord::Schema.define(version: 20151019033820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,7 +96,6 @@ ActiveRecord::Schema.define(version: 20150605175423) do
     t.string   "last_name_2"
     t.string   "dni"
     t.string   "email"
-    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
@@ -112,8 +111,6 @@ ActiveRecord::Schema.define(version: 20150605175423) do
     t.text     "iframe_code"
     t.integer  "property_id"
   end
-
-  add_index "providers", ["category_id"], name: "index_providers_on_category_id", using: :btree
 
   create_table "referrals", force: true do |t|
     t.string   "code_value"

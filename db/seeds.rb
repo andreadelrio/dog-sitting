@@ -19,13 +19,6 @@ locations.each do |data|
 end
 
 
-categories = ["Paseador", "Entrenador", "Veterinario", "Hotel"]
-
-categories.sort!.each do |category|
-  Category.find_or_create_by(name: category)
-end
-
-
 ages = ["Cachorros", "Adultos"]
 
 ages.sort!.each do |age|

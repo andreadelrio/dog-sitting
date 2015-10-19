@@ -34,15 +34,12 @@
   def edit
     @provider_attachment = @provider.provider_attachments.build
     @new_provider_attachment = @provider.provider_attachments.new
-    # @provider.pictures.build
   end
 
   # POST /providers
   # POST /providers.json
   def create
     @provider = Provider.new(provider_params)
-    @hotel_id = Category.find_by_name("Hotel").id 
-    @provider.category_id = @hotel_id
       if @provider.save
         session[:provider_id] = @provider.id
         unless params[:provider_attachments].nil?
@@ -53,9 +50,7 @@
         flash.now[:success] = "Hola #{@provider.name}, bienvenido a Kmimos."
         redirect_to root_path
       else
-       # fail
        render "new"
-       #redirect_to new_provider_path
       end
   end
 
@@ -95,7 +90,7 @@
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def provider_params
-      params.require(:provider).permit(:tipo_propiedad, :areas_externas, :emergencia, :experiencia, :iframe_code, :name, :last_name_1, :last_name_2, :dni, :avatar, :avatar_cache, :description, :email, :email_c, :phone, :price, :avg_rating, :property_id, :category_id, :password, :password_confirmation, locations_attributes: [:id], location_ids: [], provider_attachments_attributes: [:id, :provider_id, :photo], age_ids: [], size_ids: [])
+      params.require(:provider).permit(:tipo_propiedad, :areas_externas, :emergencia, :experiencia, :iframe_code, :name, :last_name_1, :last_name_2, :dni, :avatar, :avatar_cache, :description, :email, :email_c, :phone, :price, :avg_rating, :property_id, :password, :password_confirmation, locations_attributes: [:id], location_ids: [], provider_attachments_attributes: [:id, :provider_id, :photo], age_ids: [], size_ids: [])
     end
 
     def get_dates
