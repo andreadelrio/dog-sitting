@@ -9,7 +9,7 @@ class Provider < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   has_many :provider_attachments
   accepts_nested_attributes_for :provider_attachments
-  validates_presence_of :email, :category_id, :name, :last_name_1, :last_name_2, :phone, :dni
+  validates_presence_of :email, :name, :last_name_1, :last_name_2, :phone, :dni
   validates_format_of :email, with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates_uniqueness_of :dni
   has_many :localizations
@@ -25,7 +25,7 @@ class Provider < ActiveRecord::Base
   validate :fields_a_and_b_are_equal, on: :create
 
 
-  def prov_locations_modal
+  def prov_locations
     if self.locations.count > 5
       return "Varios municipios en México DF."
     else

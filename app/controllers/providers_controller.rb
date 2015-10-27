@@ -1,5 +1,5 @@
   class ProvidersController < ApplicationController
-  before_action :set_provider, only: [:show, :edit, :update, :destroy]
+  before_action :set_provider, only: [:show, :edit, :update]
   before_action :require_current_provider, only: [:edit]
   before_action :require_unlogged_provider, only: [:new]
   before_action :get_dates, only: [:index]
@@ -69,16 +69,6 @@
         format.html { render action: 'edit' }
         format.json { render json: @provider.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /providers/1
-  # DELETE /providers/1.json
-  def destroy
-    @provider.destroy
-    respond_to do |format|
-      format.html { redirect_to providers_url }
-      format.json { head :no_content }
     end
   end
 

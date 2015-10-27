@@ -52,7 +52,7 @@
            <div class="col-xs-1 hidden-lg"></div>
            <div class="col-xs-10 col-md-12">
              <h3 class="text-center text-gray mb-0 mt-0 hidden-lg hidden-md"><%= provider.name %> <%= provider.last_name_1 %> <%= provider.last_name_2 %></h3>
-             <h5 class="text-center text-graylight mt-7 hidden-lg hidden-md"><%= provider.prov_locations_modal %></h5>
+             <h5 class="text-center text-graylight mt-7 hidden-lg hidden-md"><%= provider.prov_locations %></h5>
             <h4 class="light m-0 text-gray">Desde</h4>
              <h3 class="m-0 text-secondary light">Mex $<%= provider.price %></h3>
              <h4 class="light m-0 text-gray">por noche</h4>
@@ -61,7 +61,7 @@
       </div>
       <div class="col-md-9 p-28 text-description-1 col-xs-12">
         <h3 class="text-left text-gray mb-0 mt-0 hidden-xs hidden-sm"><%= provider.name %> <%= provider.last_name_1 %> <%= provider.last_name_2 %></h3>
-        <h5 class="text-left text-graylight mt-7 hidden-xs hidden-sm"><%= provider.prov_locations_modal %></h5>
+        <h5 class="text-left text-graylight mt-7 hidden-xs hidden-sm"><%= provider.prov_locations %></h5>
         <div class="rating-reviews hidden-xs hidden-sm">
           <% unless provider.avg_rating.nil? %>
           <% provider.avg_rating.to_i.times do %>
