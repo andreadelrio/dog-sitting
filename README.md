@@ -1,6 +1,6 @@
 ### Ruby on Rails dog boarding application
 
-This is an application where dog sitters create profiles. Dog owners can the browse through the dog sitters profile an book a date with them.
+This is an application where dog sitters create profiles. Dog owners can then browse through the dog sitters profile an book a date with them.
 
 ```
 $ git clone https://github.com/andreadelrio/dog-sitting.git
