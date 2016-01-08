@@ -11,4 +11,4 @@ $ bundle exec rake db:migrate
 $ bundle exec rake test
 ```
 
-See it live [here.](kmimos-adr.herokuapp.com/)
+See it live [here.](https://kmimos-adr.herokuapp.com/)
